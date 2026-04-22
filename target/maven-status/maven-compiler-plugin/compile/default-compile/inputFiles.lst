@@ -1,0 +1,17 @@
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\config\AppConfig.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\controller\ClanController.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\controller\UsuarioController.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\ClanDAO.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\GenericDAO.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\impl\ClanDAOImpl.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\impl\GenericDAOImpl.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\impl\UsuarioDAOImpl.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\dao\UsuarioDAO.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\db\ConnectionManager.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\Main.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\model\entity\Clan.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\model\entity\Usuario.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\view\BaseView.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\view\ConsoleView.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\view\SwingView.java
+C:\Users\juang\Desktop\java-advanced-roadmap-m5-main\Semanas\Semana-5\practice mvc\new_practice\src\main\java\com\app\view\View.java
