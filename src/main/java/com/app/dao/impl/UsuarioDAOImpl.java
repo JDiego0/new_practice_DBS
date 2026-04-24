@@ -1,6 +1,7 @@
 package com.app.dao.impl;
 
 import com.app.dao.UsuarioDAO;
+import com.app.dao.util.ResultSetMapper;
 import com.app.model.entity.Usuario;
 
 import java.sql.*;
@@ -22,10 +23,13 @@ public class UsuarioDAOImpl extends GenericDAOImpl<Usuario, Integer>
     // ── Mapeo ResultSet → Entidad ──
     @Override
     protected Usuario mapRow(ResultSet rs) throws SQLException {
+        // Validar campos requeridos para detectar desacople SQL-Java
+        ResultSetMapper.validateFields(rs, new String[]{"id", "nombre", "email"}, "Usuario");
+        
         return new Usuario(
             rs.getInt("id"),
-            rs.getString("nombre"),
-            rs.getString("email")
+            ResultSetMapper.getStringSafely(rs, "nombre"),
+            ResultSetMapper.getStringSafely(rs, "email")
         );
     }
 

@@ -13,6 +13,13 @@ CREATE TABLE IF NOT EXISTS usuarios (
 
 CREATE INDEX IF NOT EXISTS idx_nombre ON usuarios(nombre);
 
+CREATE TABLE IF NOT EXISTS clans (
+    id      SERIAL PRIMARY KEY,
+    nombre  VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE INDEX IF NOT EXISTS idx_clan_nombre ON clans(nombre);
+
 
 -- ==========================================
 -- MySQL Schema (Referencia)

@@ -1,9 +1,14 @@
 package com.app.dao;
 
+import com.app.dao.capabilities.SearchableByName;
+import com.app.dao.capabilities.ValidableByName;
 import com.app.model.entity.Clan;
-import java.util.List;
 
-public interface ClanDAO extends GenericDAO<Clan, Integer>{
-    List<Clan> findByNombre(String nombre);
-    boolean existsByNombre(String nombre);
+/**
+ * Extiende GenericDAO añadiendo búsquedas específicas de Clan.
+ * Usa interfaces por capacidades para seguir DRY e ISP.
+ */
+public interface ClanDAO extends GenericDAO<Clan, Integer>, 
+                                     SearchableByName<Clan>,
+                                     ValidableByName<Clan> {
 }

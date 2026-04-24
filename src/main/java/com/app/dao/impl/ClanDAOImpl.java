@@ -1,6 +1,7 @@
 package com.app.dao.impl;
 
 import com.app.dao.ClanDAO;
+import com.app.dao.util.ResultSetMapper;
 import com.app.model.entity.Clan;
 
 import java.sql.*;
@@ -11,21 +12,24 @@ public class ClanDAOImpl extends GenericDAOImpl<Clan, Integer>
         implements ClanDAO {
 
     // ── SQL ──
-    private static final String INSERT     = "INSERT INTO clanes (nombre) VALUES (?)";
-    private static final String UPDATE     = "UPDATE clanes SET nombre=? WHERE id=?";
-    private static final String DELETE     = "DELETE FROM clanes WHERE id=?";
-    private static final String FIND_BY_ID = "SELECT * FROM clanes WHERE id=?";
-    private static final String FIND_ALL   = "SELECT * FROM clanes";
-    private static final String FIND_BY_NAME= "SELECT * FROM clanes WHERE nombre LIKE ?";
-    private static final String EXISTS_BY_NOMBRE = "SELECT COUNT(*) FROM clanes WHERE nombre=?";
+    private static final String INSERT     = "INSERT INTO clans (nombre) VALUES (?)";
+    private static final String UPDATE     = "UPDATE clans SET nombre=? WHERE id=?";
+    private static final String DELETE     = "DELETE FROM clans WHERE id=?";
+    private static final String FIND_BY_ID = "SELECT * FROM clans WHERE id=?";
+    private static final String FIND_ALL   = "SELECT * FROM clans";
+    private static final String FIND_BY_NAME= "SELECT * FROM clans WHERE nombre LIKE ?";
+    private static final String EXISTS_BY_NOMBRE = "SELECT COUNT(*) FROM clans WHERE nombre=?";
 
 
     // ── Mapeo ResultSet → Entidad ──
     @Override
     protected Clan mapRow(ResultSet rs) throws SQLException {
+        // Validar campos requeridos para detectar desacople SQL-Java
+        ResultSetMapper.validateFields(rs, new String[]{"id", "nombre"}, "Clan");
+        
         return new Clan(
                 rs.getInt("id"),
-                rs.getString("nombre")
+                ResultSetMapper.getStringSafely(rs, "nombre")
         );
     }
 
